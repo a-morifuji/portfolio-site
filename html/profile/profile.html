@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール&nbsp;|&nbsp;Asuka&nbsp;Morifuji&nbsp;Portfolio</title>
+
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <h1>
+                <a href="/index.html">
+                    <img src="/img/logo_ol.webp" alt="ロゴ">
+                </a>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="/index.html#works">制作物</a></li>
+                    <li><a href="/html/profile/profile.html">プロフィール</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ★ここにJSでプロフィールが自動生成される -->
+        <div id="profile_container"></div>
+    </main>
+
+    <footer>
+        <small>&copy;2026 Asuka Morifuji</small>
+    </footer>
+
+    <script src="/javascript/profile/profile_data.js"></script>
+    <script src="/javascript/profile/profile.js"></script>
+</body>
+</html>

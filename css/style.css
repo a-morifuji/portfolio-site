@@ -1,0 +1,985 @@
+@charset "UTF-8";
+
+/* =================================
+   1. 共通設定
+================================= */
+body {
+    font-family: "ZEN Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    color: #0F172A;
+    background-color: #F8FAFC;
+    margin: 0; /* ブラウザ標準の外側余白をリセット */
+}
+
+img {
+    max-width: 100%; /* 親要素からはみ出さないように自動縮小 */
+    height: auto; /* アスペクト比（縦横比）を維持 */
+    vertical-align: bottom; /* 画像下に生じる不要な隙間を消去 */
+}
+
+li {
+    list-style: none; /* リストの箇条書きポッチ（・）を非表示 */
+}
+
+a {
+    color: inherit; /* 親要素の文字色をそのまま継承 */
+    text-decoration: none !important; /* 下線を強制的に非表示 */
+}
+
+/* ページ全体のコンテンツ幅を制限・中央寄せする汎用クラス */
+.wrapper {
+    max-width: 1100px; /* 最大幅を1100pxに制限 */
+    width: 90%; /* 画面幅に合わせて伸縮（左右に5%ずつの余白） */
+    margin: 0 auto; /* 左右中央寄せ */
+}
+
+section {
+    margin: 120px 0; /* 各セクションの上下間に広めの余白を確保 */
+}
+
+/* 共通見出し（h2）スタイル */
+h2,
+#profile h2,
+#works h2,
+#contact h2,
+#profile_detail h2,
+#career h2,
+#skills h2,
+#qualifications h2,
+#strengths h2 {
+    text-align: center; /* 中央揃え */
+    color: #0284C7; /* プライマリーブルー */
+    font-size: 1.5rem; /* 文字サイズ 24px 相当 */
+    margin-bottom: 40px; /* 下部との余白 */
+}
+
+/* お問い合わせ完了ページなどの見出し調整 */
+#thanks h2 {
+    text-align: center;
+    color: #0284C7;
+    font-size: 1.25rem; /* 少し控えめなサイズ */
+}
+
+/* スマホ専用要素（PC表示時は非表示） */
+.sp_only {
+    display: none;
+}
+
+a:hover {
+  color: #0284C7;
+}
+
+
+/* =================================
+   2. ヘッダー
+================================= */
+#header {
+    position: sticky; /* 画面スクロール時に上部に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 他の要素より前面に表示 */
+    background-color: #F8FAFC;
+    padding: 20px 0;
+    border-bottom: 1px solid #D6D1C7; /* 下部に区切り線 */
+    box-sizing: border-box; /* パディングを含めたサイズ計算 */
+}
+
+/* ロゴとナビゲーションの左右配置 */
+#header .wrapper {
+    display: flex;
+    align-items: center; /* 上下中央揃え */
+    justify-content: space-between; /* 左右両端に分散配置 */
+}
+
+header img {
+    width: 140px;
+    display: block;
+}
+
+/* ナビゲーションメニューの横並び */
+header ul {
+    display: flex;
+    gap: 40px; /* メニュー項目同士の間隔 */
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* =================================
+   3. メインビジュアル (MV)
+================================= */
+#mv {
+    margin: 40px 0 80px; /* 上下に余白を設定 */
+}
+
+#mv img {
+    width: 100%;
+    object-fit: cover; /* 枠に合わせて切り抜き表示 */
+    display: block;
+}
+
+/* プロフィールカード枠（PC表示：左右2カラム構造） */
+.profile_card {
+    display: flex;
+    max-width: 760px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* うっすらとした影 */
+    border-radius: 4px;
+    overflow: hidden; /* 角丸からはみ出る要素をカット */
+}
+
+.profile_img {
+    width: 200px; /* 画像エリアの固定幅 */
+    flex-shrink: 0; /* 横幅の自動縮小を防止 */
+    background-color: #9E9E9E;
+}
+
+.profile_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の変形を防ぎ枠いっぱいに表示 */
+    display: block;
+}
+
+.profile_info {
+    flex: 1; /* 残りの横幅をすべて占有 */
+    padding: 40px 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直方向の中央揃え */
+}
+
+.profile_info dl {
+    margin-bottom: 20px;
+}
+
+.dl_row {
+    margin-bottom: 16px;
+}
+
+.dl_row:last-child {
+    margin-bottom: 0; /* 最後の行は下余白を消去 */
+}
+
+.dl_row dt {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0F172A;
+    margin-bottom: 4px;
+}
+
+.dl_row dd {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin-left: 0; /* 定義リスト標準のインデントをリセット */
+}
+
+.profile_text {
+    font-size: 0.8125rem;
+    line-height: 1.8; /* 行間を広げて読みやすく */
+    color: #334155;
+    margin-bottom: 24px;
+}
+
+/* ボタン共通デザイン（アクセントカラー：イエロー） */
+.more_btn {
+    display: inline-block;
+    width: 160px;
+    padding: 12px 0;
+    background-color: #FEF08A; /* マイルドなイエロー */
+    color: #0F172A !important;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, transform 0.2s; /* ホバー時のアニメーション効果 */
+}
+
+.more_btn:hover {
+    opacity: 0.9; /* 少し透明に */
+    transform: translateY(-1px); /* 1px 上へ浮かせる */
+}
+
+
+/* =================================
+   5. プロフィール詳細 (経歴・スキル・資格・強み)
+================================= */
+/* 経歴 (Timeline) */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline_item {
+    display: flex;
+    gap: 40px; /* 日付とテキストの間隔 */
+    margin-bottom: 35px;
+}
+
+.timeline_date {
+    width: 100px;
+    font-weight: bold;
+    color: #0F172A;
+    flex-shrink: 0;
+    font-size: 0.9375rem;
+}
+
+.timeline_content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #0F172A;
+}
+
+.timeline_content p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+
+/* 使用経験のあるツール (Tools) - 4カラム構成 */
+.tools_grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.tool_card {
+    flex: 1; /* 各カードの幅を等分割 */
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tool_card h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #0F172A;
+}
+
+.tool_card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tool_tags {
+    display: flex;
+    flex-wrap: wrap; /* 溢れたタグは自動で折り返し */
+    gap: 10px;
+}
+
+.tool_tags li {
+    font-size: 0.8125rem;
+    color: #555;
+    background-color: #F1F5F9; /* タグの背景色 */
+    padding: 4px 12px;
+    border-radius: 2px;
+}
+
+
+/* スキル (Skills) - 3カラム構成 */
+.skills_grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.skill_card {
+    flex: 1; /* 各カードの幅を等分割 */
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.skill_card h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #0F172A;
+}
+
+.skill_card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skill_tags {
+    display: flex;
+    flex-wrap: wrap; /* 溢れたタグは自動で折り返し */
+    gap: 10px;
+}
+
+.skill_tags li {
+    font-size: 0.8125rem;
+    color: #555;
+    background-color: #F1F5F9; /* タグの背景色 */
+    padding: 4px 12px;
+    border-radius: 2px;
+}
+
+
+/* 資格 (Qualifications) */
+.qualification_list {
+    max-width: fit-content; /* 中身のサイズに合わせて幅を自動調整 */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.qualification_list li {
+    font-size: 0.9375rem;
+    padding: 12px 0;
+    border-bottom: 1px dashed #D6D1C7; /* 破線の区切り線 */
+    color: #0F172A;
+}
+
+/* 私の強み (Strengths) */
+.strengths_list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.strength_item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 35px;
+    align-items: flex-start; /* 上揃え */
+}
+
+.strength_title {
+    width: 100px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #0F172A;
+    flex-shrink: 0;
+}
+
+.strength_desc {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+
+/* =================================
+   6. 制作物一覧 (Works)
+================================= */
+/* カテゴリ切り替えフィルターボタン */
+#works ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+#works ul button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: #333;
+}
+
+#works ul button.active {
+    font-weight: bold;
+    color: #0076ce; /* アクティブ時の青文字 */
+}
+
+#works ul button:hover {
+    color: #0076ce;
+}
+
+/* 制作物カードの2カラムグリッド配置 */
+#works_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1:1の2列 */
+    gap: 100px 80px; /* 行間100px、列間80px */
+}
+
+#works_list > div {
+    text-align: center;
+    overflow: hidden; /* 親枠からはみ出るのを防止 */
+}
+
+/* PC版：制作物カード画像の統一高さ調整 */
+#works_list img {
+    width: 100%;
+    height: 240px; /* 画像エリアの最大高さを統一 */
+    object-fit: contain; /* 枠からはみ出さず綺麗に収める */
+    object-position: center;
+    background-color: #F8FAFC;
+    margin: 0 auto 12px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+#works_list > div:hover img {
+    transform: scale(1.05);
+}
+
+#works_list h3,
+#works_list p {
+    text-align: left;
+}
+
+#works_list h3 {
+    font-size: 0.9375rem;
+    font-weight: normal;
+    margin-bottom: 6px;
+    color: #18181B;
+}
+
+#works_list p {
+    font-size: 0.6875rem;
+    color: #666;
+}
+
+/* フィルター非該当アイテムの非表示用 */
+.work-item.is-hidden {
+    display: none;
+}
+
+/* 複数画像並び用ボックス */
+.cramSchool_box,
+.tomato_box,
+.multi_img_box {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cramSchool_box:hover,
+.tomato_box:hover,
+.multi_img_box:hover {
+    transform: scale(1.05);
+}
+
+
+/* =================================
+   7. 制作物詳細 (Work Detail)
+================================= */
+/* 作品タイトルのヘッダー領域 */
+.work_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* 下揃え */
+    margin-bottom: 24px;
+}
+
+.work_header_left h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.work_url {
+    font-size: 0.875rem;
+    color: #333;
+}
+
+.work_url a {
+    color: #0284C7;
+    text-decoration: underline !important;
+}
+
+.work_header_right dl {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta_row {
+    display: flex;
+    gap: 16px;
+    font-size: 0.875rem;
+}
+
+.meta_row dt {
+    color: #555;
+    width: 50px;
+}
+
+.meta_row dd {
+    color: #0F172A;
+    font-weight: bold;
+}
+
+/* アイキャッチメイン画像 */
+.work_main_img {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.work_main_img img {
+    width: 100%;
+    max-width: 900px;
+    object-fit: cover;
+}
+
+/* バナー作品時のメイン画像幅サイズ調整 */
+.work_main_img.is-banner img {
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 詳細情報テキスト領域 */
+.work_info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info_row {
+    display: flex;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.info_row dt {
+    width: 120px;
+    font-weight: bold;
+    color: #0F172A;
+    flex-shrink: 0;
+}
+
+.info_row dd {
+    color: #333;
+    flex-grow: 1;
+}
+
+/* 画面キャプチャプレビュー（PC/SP並列） */
+.pages_grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+/* 動画の場面 画像サイズ */
+.pages_grid.is-movie {
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.pages_grid.is-movie .page_img_wrap {
+    padding: 12px;
+}
+
+.pages_grid.is-movie .page_img_wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.page_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.page_item h3 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #0F172A;
+}
+
+.page_pc {
+    width: 60%;
+}
+
+.page_sp {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.page_img_wrap {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+.page_sp .page_img_wrap {
+    height: 100%;
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_sp .page_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    display: block;
+}
+
+/* Webサイト案件用SPプレビューの高さ指定・スクロール見切れ調整 */
+.page_sp.type-web .page_img_wrap {
+    height: 360px !important;
+    overflow: hidden !important;
+    display: block;
+}
+
+.page_sp.type-web .page_img_wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top !important;
+}
+
+/* 「制作物ページへ戻る」ボタン設置領域 */
+.back_btn_wrap {
+    margin-top: 100px; /* 上部との余白を確保 */
+    text-align: center;
+}
+
+.back_btn {
+    display: inline-block;
+    width: 240px;
+    padding: 14px 0;
+    background-color: #FEF08A;
+    color: #0F172A !important;
+    text-align: center;
+    font-size: 0.9375rem;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.back_btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   8. お問い合わせ & フッター
+================================= */
+.contact_btn {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+    padding: 14px 0;
+    background-color: #FEF08A;
+    color: #0F172A !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-radius: 2px;
+}
+
+#contact p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #D6D1C7;
+}
+
+small {
+    display: inline-block;
+    margin: 18px;
+    font-size: 0.75rem;
+}
+
+
+/* =================================
+   9. レスポンシブ (スマホ対応 768px以下のみ適用)
+================================= */
+@media (max-width: 768px) {
+
+    /* スマホ専用要素を表示 */
+    .sp_only {
+        display: inline;
+    }
+
+    /* ヘッダーの幅・余白調整 */
+    #header .wrapper {
+        padding: 0 10px;
+    }
+
+    header img, 
+    #header .logo {
+        width: 110px;
+    }
+
+    header ul {
+        gap: 12px;
+        font-size: 0.75rem;
+    }
+
+    header li {
+        white-space: nowrap; /* テキストの折り返しを防止 */
+    }
+
+    /* プロフィールカードを縦並びに切り替え */
+    .profile_card {
+        display: flex;
+        flex-direction: column; /* 縦並び */
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        padding: 24px 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .profile_img {
+        width: 150px;
+        height: 220px;
+        flex-shrink: 0;
+        margin: 0 auto 32px;
+    }
+
+    .profile_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+
+    .profile_info {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .profile_info dl {
+        margin-bottom: 0;
+    }
+
+    .dl_row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .dl_row:last-child {
+        margin-bottom: 0;
+    }
+
+    .dl_row dt {
+        font-weight: bold;
+        font-size: 0.9375rem;
+        color: #0F172A;
+    }
+
+    .dl_row dd {
+        font-size: 0.875rem;
+        color: #333;
+        margin-left: 0;
+        line-height: 1.7;
+    }
+
+    .timeline_item,
+    .strength_item {
+        gap: 16px;
+    }
+
+    .timeline_date,
+    .strength_title {
+        width: 70px;
+    }
+
+    /* 使用経験のあるツールカードを縦並び化 */
+    .tools_grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tool_tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2列グリッド化 */
+        gap: 8px;
+    }
+
+    .tool_tags li {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tool_tags .sp_br {
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    /* スキルカードを縦並び化 */
+    .skills_grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill_tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2列グリッド化 */
+        gap: 8px;
+    }
+
+    .skill_tags li {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .skill_tags .sp_br {
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    /* 制作物一覧を1カラム化 & 画像リサイズ最適化 */
+    #works_list {
+        grid-template-columns: 1fr;
+        gap: 60px 0;
+        width: 100%;
+    }
+
+    #works_list img,
+    #works_list > div img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important; /* スマホ時は高さを自動にして横幅いっぱいに拡大 */
+        object-fit: contain !important;
+    }
+
+    /* 横並び複数画像ボックス（バナー広告等） */
+    .cramSchool_box,
+    .tomato_box,
+    .multi_img_box {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .cramSchool_box img,
+    .tomato_box img,
+    .multi_img_box img {
+        flex: 1 1 0% !important; /* 画面幅に合わせて綺麗に50%ずつ分配 */
+        width: 50% !important;
+        max-width: 50% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* ショート動画（Movie）一覧画像のスマホ表示：縮小 */
+    #works_list .work-item[data-category="movie"] img,
+    #works_list .movie-item img,
+    #works_list .movie_img {
+        width: 30% !important;
+        max-width: 200px !important;
+        height: auto !important;
+        margin: 0 auto 12px !important;
+        display: block !important;
+        object-fit: contain !important;
+    }
+
+    /* 制作物詳細のレスポンシブ化 */
+    .work_header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .work_header_left h3 {
+        font-size: 0.9375rem;
+        white-space: nowrap;
+    }
+
+    .work_url {
+        margin-top: 20px;
+    }
+
+    .meta_row,
+    .info_row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .meta_row {
+        margin-bottom: 12px;
+    }
+
+    .meta_row dt,
+    .info_row dt {
+        width: 100%;
+    }
+
+    .info_row {
+        margin-bottom: 20px;
+    }
+
+    /* ページキャプチャ (SP表示時) */
+    .pages_grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* 動画詳細ページの画像グリッドスマホ表示調整 */
+    .pages_grid.is-movie {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        max-width: 100% !important;
+    }
+
+    .pages_grid.is-movie img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .pages_grid .page_sp {
+        width: 100% !important;
+        max-width: 140px !important;
+        margin: 0 auto !important;
+    }
+
+    .pages_grid .page_sp.type-web .page_img_wrap {
+        height: 280px !important;
+        max-height: none !important;
+        overflow: hidden !important;
+    }
+
+    .pages_grid .page_sp.type-web .page_img_wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: top !important;
+    }
+}
