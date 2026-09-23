@@ -81,7 +81,7 @@ if (!data) {
             const backBtn = document.createElement("div");
             backBtn.classList.add("back_btn_wrap");
             backBtn.innerHTML = `
-                <a href="/index.html#works" class="back_btn">制作物ページへ戻る</a>
+                <a href="index.html#works" class="back_btn">制作物ページへ戻る</a>
             `;
             section.querySelector(".wrapper").appendChild(backBtn);
         }

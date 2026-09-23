@@ -4,7 +4,7 @@ const profileData = {
         name_en: "Asuka&nbsp;&nbsp;Morifuji",
         birthday: "2001年04月30日",
         hobbies: "ゲーム、カフェ巡り、文房具集め、<br class=\"sp_only\">写真を撮ること",
-        img: "/img/profile/iconPhoto.webp"
+        img: "img/profile/iconPhoto.webp"
     },
 
     career: [

@@ -31,73 +31,73 @@ document.addEventListener('DOMContentLoaded', () => {
 const worksData = [
     {
         category: "lp",
-        link: "/html/works/work_detail.html?id=skinCare",
-        img: "/img/works/LP/skincare/skincare_frame.webp",
+        link: "html/works/work_detail.html?id=skinCare",
+        img: "img/works/LP/skincare/skincare_frame.webp",
         title: "LP&nbsp;&nbsp;&nbsp;スキンケアブランド",
         type: "LP / 自主制作（デザイン、コーディング）"
     },
     {
         category: "web",
-        link: "/html/works/work_detail.html?id=portfolio",
-        img: "/img/works/Web/portfolio/portfolio_pcSp_frame.webp",
+        link: "html/works/work_detail.html?id=portfolio",
+        img: "img/works/Web/portfolio/portfolio_pcSp_frame.webp",
         title: "Webサイト&nbsp;&nbsp;&nbsp;ポートフォリオ",
         type: "Web / 自主制作（デザイン、コーディング）"
     },
     {
         category: "web",
-        link: "/html/works/work_detail.html?id=hamburger",
-        img: "/img/works/Web/hamburger/hamburger_frame.webp",
+        link: "html/works/work_detail.html?id=hamburger",
+        img: "img/works/Web/hamburger/hamburger_frame.webp",
         title: "Webサイト&nbsp;&nbsp;&nbsp;ハンバーガーショップ",
         type: "Web / スクール課題（模写コーディング）"
     },
     {
         category: "web",
-        link: "/html/works/work_detail.html?id=iceCream",
-        img: "/img/works/Web/iceCream/ice_pc_frame.webp",
+        link: "html/works/work_detail.html?id=iceCream",
+        img: "img/works/Web/iceCream/ice_pc_frame.webp",
         title: "Webサイト&nbsp;&nbsp;&nbsp;アイスクリームショップ",
         type: "Web / スクール課題（模写コーディング）"
     },
     {
         category: "graphic",
-        link: "/html/works/work_detail.html?id=summerCourses",
+        link: "html/works/work_detail.html?id=summerCourses",
         img: [
-            "/img/works/Graphic/summerCourses/summer_m.webp",
-            "/img/works/Graphic/summerCourses/summer_w.webp"
+            "img/works/Graphic/summerCourses/summer_m.webp",
+            "img/works/Graphic/summerCourses/summer_w.webp"
         ],
         title: "SNSバナー広告&nbsp;&nbsp;&nbsp;塾の夏期講習",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
         category: "graphic",
-        link: "/html/works/work_detail.html?id=tomatoJuice",
+        link: "html/works/work_detail.html?id=tomatoJuice",
         img: [
-            "/img/works/Graphic/tomatoJuice/banner-tomato01.webp",
-            "/img/works/Graphic/tomatoJuice/banner-tomato02.webp"
+            "img/works/Graphic/tomatoJuice/banner-tomato01.webp",
+            "img/works/Graphic/tomatoJuice/banner-tomato02.webp"
         ],
         title: "SNSバナー広告&nbsp;&nbsp;&nbsp;トマトジュース",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
         category: "graphic",
-        link: "/html/works/work_detail.html?id=sandwich",
-        img: "/img/works/Graphic/sandwich/sandwich_01_up.webp",
+        link: "html/works/work_detail.html?id=sandwich",
+        img: "img/works/Graphic/sandwich/sandwich_01_up.webp",
         title: "フライヤー&nbsp;&nbsp;&nbsp;サンドイッチ屋",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
         category: "graphic",
-        link: "/html/works/work_detail.html?id=englishSchool",
+        link: "html/works/work_detail.html?id=englishSchool",
         img: [
-            "/img/works/Graphic/englishSchool/childEnglish_pcSp_frame.webp"
+            "img/works/Graphic/englishSchool/childEnglish_pcSp_frame.webp"
         ],
         title: "Webサイトデザイン&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
         category: "movie",
-        link: "/html/works/work_detail.html?id=englishSchoolPr",
+        link: "html/works/work_detail.html?id=englishSchoolPr",
         img: [
-            "/img/works/Movie/englishSchoolPr/shotEnglish001_mv.webp"
+            "img/works/Movie/englishSchoolPr/shotEnglish001_mv.webp"
         ],
         title: "ショート動画&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
         type: "Movie / スクール課題（構成、デザイン、動画編集）"
