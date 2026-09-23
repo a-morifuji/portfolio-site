@@ -59,13 +59,6 @@ const worksData = [
     },
     {
         category: "graphic",
-        link: "/html/works/work_detail.html?id=sandwich",
-        img: "/img/works/Graphic/sandwich/sandwich_01_up.webp",
-        title: "フライヤー&nbsp;&nbsp;&nbsp;サンドイッチ屋",
-        type: "Graphic / スクール課題（デザイン）"
-    },
-    {
-        category: "graphic",
         link: "/html/works/work_detail.html?id=summerCourses",
         img: [
             "/img/works/Graphic/summerCourses/summer_m.webp",
@@ -82,6 +75,13 @@ const worksData = [
             "/img/works/Graphic/tomatoJuice/banner-tomato02.webp"
         ],
         title: "SNSバナー広告&nbsp;&nbsp;&nbsp;トマトジュース",
+        type: "Graphic / スクール課題（デザイン）"
+    },
+    {
+        category: "graphic",
+        link: "/html/works/work_detail.html?id=sandwich",
+        img: "/img/works/Graphic/sandwich/sandwich_01_up.webp",
+        title: "フライヤー&nbsp;&nbsp;&nbsp;サンドイッチ屋",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
