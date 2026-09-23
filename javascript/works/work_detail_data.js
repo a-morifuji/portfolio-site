@@ -7,7 +7,7 @@ const workDetailsData = {
                 subtitle: "",
                 type: "LP",
                 client: "自主制作",
-                img: "img/works/LP/skincare/skincare_frame.webp",
+                img: "../../img/works/LP/skincare/skincare_frame.webp",
                 info: {
                     overview: "架空のスキンケアブランドにおけるLP制作。",
                     range: "デザイン、コーディング",
@@ -20,8 +20,8 @@ const workDetailsData = {
                     improvement: "セクションごとの背景色にメリハリをつけ、コンテンツの区切りと視認性を向上させる。"
                 },
                 pages: [
-                    { title: "PC", img: "img/works/LP/skincare/skincare_full_pc.webp" },
-                    { title: "SP", img: "img/works/LP/skincare/skincare_full_sp.webp" }
+                    { title: "PC", img: "../../img/works/LP/skincare/skincare_full_pc.webp" },
+                    { title: "SP", img: "../../img/works/LP/skincare/skincare_full_sp.webp" }
                 ]
             }
         ]
@@ -34,7 +34,7 @@ const workDetailsData = {
                 subtitle: "",
                 type: "Web",
                 client: "自主制作",
-                img: "img/works/Web/portfolio/portfolio_pcSp_frame.webp",
+                img: "../../img/works/Web/portfolio/portfolio_pcSp_frame.webp",
                 info: {
                     overview: "自身の制作実績やスキル、制作に対する思考プロセスを伝えるためのポートフォリオサイト制作。",
                     range: "デザイン、コーディング",
@@ -47,8 +47,8 @@ const workDetailsData = {
                     improvement: "制作物一覧をカード型のグリッドレイアウトに統一し、視認性を上げる。"
                 },
                 pages: [
-                    { title: "PC", img: "img/works/Web/portfolio/portfolio_pc_top.webp" },
-                    { title: "SP", img: "img/works/Web/portfolio/portfolio_sp_top.webp" }
+                    { title: "PC", img: "../../img/works/Web/portfolio/portfolio_pc_top.webp" },
+                    { title: "SP", img: "../../img/works/Web/portfolio/portfolio_sp_top.webp" }
                 ]
             }
         ]
@@ -62,7 +62,7 @@ const workDetailsData = {
                 subtitle: "",
                 type: "Web",
                 client: "スクール課題",
-                img: "img/works/Web/hamburger/hamburger_frame.webp",
+                img: "../../img/works/Web/hamburger/hamburger_frame.webp",
                 info: {
                     overview: "架空のハンバーガーショップにおけるWebサイト制作。",
                     range: "コーディング",
@@ -75,8 +75,8 @@ const workDetailsData = {
                     improvement: "店舗のポップな雰囲気に合わせ、ホバー時にCSSアニメーションを実装。"
                 },
                 pages: [
-                    { title: "PC", img: "img/works/Web/hamburger/hamburger_full_pc.webp" },
-                    { title: "SP", img: "img/works/Web/hamburger/hamburger_full_sp.webp" }
+                    { title: "PC", img: "../../img/works/Web/hamburger/hamburger_full_pc.webp" },
+                    { title: "SP", img: "../../img/works/Web/hamburger/hamburger_full_sp.webp" }
                 ]
             }
         ]
@@ -90,7 +90,7 @@ const workDetailsData = {
                 subtitle: "",
                 type: "Web",
                 client: "スクール課題",
-                img: "img/works/Web/iceCream/ice_pc_frame.webp",
+                img: "../../img/works/Web/iceCream/ice_pc_frame.webp",
                 info: {
                     overview: "架空のアイスクリームショップにおけるWebサイト制作。",
                     range: "コーディング",
@@ -103,7 +103,7 @@ const workDetailsData = {
                     improvement: "スマートフォン版のデザインカンプを作成し、レスポンシブ対応。"
                 },
                 pages: [
-                    { title: "PC", img: "img/works/Web/iceCream/ice_full_pc.webp" }
+                    { title: "PC", img: "../../img/works/Web/iceCream/ice_full_pc.webp" }
                 ]
             }
         ]
@@ -117,7 +117,7 @@ const workDetailsData = {
                 type: "Graphic",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Graphic/summerCourses/summer_m.webp",
+                img: "../../img/works/Graphic/summerCourses/summer_m.webp",
                 info: {
                     overview: "架空の学習塾における夏期講習プロモーション用バナー制作。",
                     range: "デザイン",
@@ -135,7 +135,7 @@ const workDetailsData = {
                 type: "Graphic",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Graphic/summerCourses/summer_w.webp",
+                img: "../../img/works/Graphic/summerCourses/summer_w.webp",
                 info: {
                     overview: "架空の学習塾における夏期講習プロモーション用バナー制作。",
                     range: "デザイン",
@@ -159,7 +159,7 @@ const workDetailsData = {
                 type: "Graphic",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Graphic/tomatoJuice/banner-tomato02.webp",
+                img: "../../img/works/Graphic/tomatoJuice/banner-tomato02.webp",
                 info: {
                     overview: "架空の食品企業におけるトマトジュースのプロモーション用バナー制作。",
                     time: "9時間",
@@ -176,7 +176,7 @@ const workDetailsData = {
                 type: "Graphic",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Graphic/tomatoJuice/banner-tomato01.webp",
+                img: "../../img/works/Graphic/tomatoJuice/banner-tomato01.webp",
                 info: {
                     overview: "架空の食品企業におけるトマトジュースのプロモーション用バナー制作。",
                     time: "9時間",
@@ -199,7 +199,7 @@ const workDetailsData = {
                 type: "Graphic",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Graphic/sandwich/sandwich_01_up.webp",
+                img: "../../img/works/Graphic/sandwich/sandwich_01_up.webp",
                 info: {
                     overview: "名もなきサンドイッチ屋様におけるプロモーション用フライヤー制作。",
                     range: "デザイン",
@@ -212,8 +212,8 @@ const workDetailsData = {
                     improvement: "店舗ロゴ周辺の背景をサンドイッチの包み紙に変更し、ナチュラルな世界観をより強調。"
                 },
                 pages: [
-                    { title: "表面", img: "img/works/Graphic/sandwich/sandwich_01.webp" },
-                    { title: "裏面", img: "img/works/Graphic/sandwich/sandwich_02.webp" }
+                    { title: "表面", img: "../../img/works/Graphic/sandwich/sandwich_01.webp" },
+                    { title: "裏面", img: "../../img/works/Graphic/sandwich/sandwich_02.webp" }
                 ]
             }
         ]
@@ -226,7 +226,7 @@ const workDetailsData = {
                 subtitle: "",
                 type: "Graphic",
                 client: "スクール課題",
-                img: "img/works/Graphic/englishSchool/childEnglish_pcSp_frame.webp",
+                img: "../../img/works/Graphic/englishSchool/childEnglish_pcSp_frame.webp",
                 info: {
                     overview: "架空の子ども向け英会話教室におけるWebサイトのデザインカンプ制作。",
                     range: "デザイン",
@@ -239,8 +239,8 @@ const workDetailsData = {
                     improvement: "デザインカンプをもとにしたWebコーディングの実装。"
                 },
                 pages: [
-                    { title: "PC", img: "img/works/Graphic/englishSchool/childEnglish_pc_design.webp" },
-                    { title: "SP", img: "img/works/Graphic/englishSchool/childEnglish_sp_design.webp" }
+                    { title: "PC", img: "../../img/works/Graphic/englishSchool/childEnglish_pc_design.webp" },
+                    { title: "SP", img: "../../img/works/Graphic/englishSchool/childEnglish_sp_design.webp" }
                 ]
             }
         ]
@@ -255,7 +255,7 @@ const workDetailsData = {
                 type: "Movie",
                 isBanner: true,
                 client: "スクール課題",
-                img: "img/works/Movie/englishSchoolPr/shotEnglish001_mv.webp",
+                img: "../../img/works/Movie/englishSchoolPr/shotEnglish001_mv.webp",
                 info: {
                     overview: "架空の子ども向け英会話教室における、プロモーション用ショート動画制作。",
                     range: "構成、デザイン、動画編集",
@@ -268,10 +268,10 @@ const workDetailsData = {
                     improvement: "「保護者の声」のシーンを追加し、より安心感と信頼性を伝える設計にする。"
                 },
                 pages: [
-                    { title: "場面1", img: "img/works/Movie/englishSchoolPr/shotEnglish001.webp" },
-                    { title: "場面2", img: "img/works/Movie/englishSchoolPr/shotEnglish002.webp" },
-                    { title: "場面3", img: "img/works/Movie/englishSchoolPr/shotEnglish003.webp" },
-                    { title: "場面4", img: "img/works/Movie/englishSchoolPr/shotEnglish004.webp" }
+                    { title: "場面1", img: "../../img/works/Movie/englishSchoolPr/shotEnglish001.webp" },
+                    { title: "場面2", img: "../../img/works/Movie/englishSchoolPr/shotEnglish002.webp" },
+                    { title: "場面3", img: "../../img/works/Movie/englishSchoolPr/shotEnglish003.webp" },
+                    { title: "場面4", img: "../../img/works/Movie/englishSchoolPr/shotEnglish004.webp" }
                 ]
             }
         ]
