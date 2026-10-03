@@ -28,8 +28,8 @@ const profileData = {
     tools: [
         {
             title: "コーディング",
-            desc: "システム開発・Webアプリケーション開発の実務経験があります。可読性の高いコード記述と適切な処理実装を意識しています。",
-            tags: ["Java", "PHP", "Apex"]
+            desc: "JavaやPHP、jQueryを用いたシステム開発の実務経験があります。可読性の高いコード記述と適切な処理実装を意識しています。",
+            tags: ["Java", "PHP", "Apex", "jQuery"]
         },
         {
             title: "データベース",
@@ -43,8 +43,8 @@ const profileData = {
         },
         {
             title: "その他",
-            desc: "TortoiseGitを用いたバージョン管理を実施し、ソースコードの変更履歴保持やスムーズなチーム開発・管理に努めています。",
-            tags: ["TortoiseGit"]
+            desc: "SVNでバージョン管理を行い、ソースコードの変更履歴を管理し、作業を進めました。また、Teamsなど活を用してメンバー間の情報共有や連携を行いました。",
+            tags: ["TortoiseGit", "Teams", "Slack", "Backlog"]
         }
     ],
 
@@ -57,7 +57,7 @@ const profileData = {
         {
             title: "コーディング",
             desc: "デザインカンプを元にコーディングすることができます。正確にコーディングし、レイアウトが崩れないことを意識しております。",
-            tags: ["HTML", "CSS", "JavaScript<span class=\"sp_br\">（勉強中）", "VSCode"]
+            tags: ["HTML", "CSS", "JavaScript<span class=\"sp_br\">（勉強中）"]
         },
         {
             title: "その他",
