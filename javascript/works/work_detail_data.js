@@ -220,7 +220,7 @@ const workDetailsData = {
     },
 
     englishSchool: {
-        title: "Webサイトデザイン&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
+        title: "デザインカンプ&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
         items: [
             {
                 subtitle: "",
