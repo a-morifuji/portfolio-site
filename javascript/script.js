@@ -90,7 +90,7 @@ const worksData = [
         img: [
             "img/works/Graphic/englishSchool/childEnglish_pcSp_frame.webp"
         ],
-        title: "Webサイトデザイン&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
+        title: "デザインカンプ&nbsp;&nbsp;&nbsp;子ども向け英会話教室",
         type: "Graphic / スクール課題（デザイン）"
     },
     {
